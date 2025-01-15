@@ -1,0 +1,19 @@
+<div class="d-flex align-items-center justify-content-center">
+  <div class="card">
+    <div class="card-header">Se Connecter Là</div>
+    <div class="card-body">
+      <form #loginForm="ngForm" (ngSubmit)="submitLogin()">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" name="email" class="form-control" id="email" [(ngModel)]="form.email" required />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Mot de passe</label>
+          <input type="password" name="password" class="form-control" id="password" [(ngModel)]="form.password"
+            required />
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Se Connecter</button>
+      </form>
+    </div>
+  </div>
+</div>
